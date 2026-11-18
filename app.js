@@ -105,7 +105,7 @@
       b.setAttribute("aria-selected", b.dataset.level === lv ? "true" : "false");
       if (b.dataset.level === lv) $("levels").style.setProperty("--i", i);
     });
-    $("temas").textContent = "Temas de hoy: " + puzzle.temas.join(" · ");
+    $("temas").textContent = "Temas de hoy: " + (puzzle.destacados || puzzle.temas).join(" · ");
   }
 
   function renderGrid() {
